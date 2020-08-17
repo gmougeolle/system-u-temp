@@ -1,1 +1,6 @@
 name: U – Les Nouveaux Composants
+fileWatchPaths: 
+  - temp/*.css
+examples:
+  css: 
+    - temp/index.css

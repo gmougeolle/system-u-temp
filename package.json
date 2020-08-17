@@ -14,6 +14,8 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-compat": "^3.8.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "less": "^3.12.2",
+    "parcel-bundler": "^1.12.4",
     "prettier": "2.0.5",
     "stylelint": "^13.6.1",
     "stylelint-config-rational-order": "^0.1.2",
@@ -25,7 +27,13 @@
   "license": "MIT",
   "scripts": {
     "format": "eslint . --fix",
-    "start-stylemark": "stylemark -c .stylemark.yml -i src/ -w"
+    "watch-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/ -w 20 -b",
+    "watch-parcel": "parcel src/index.less -d temp/",
+    "build-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/",
+    "build-parcel": "parcel build src/index.less -d temp/",
+    "dev": "concurrently --restart-tries 5 'npm:watch-parcel' 'npm:watch-stylemark'",
+    "build": "npm run-script build-parcel && npm run-script build-stylemark",
+    "start": "npm run-script dev"
   },
   "config": {
     "commitizen": {

@@ -19,3 +19,7 @@ node_modules/
 
 # Mac files
 .DS_Store
+
+.cache/
+temp/
+dist/
