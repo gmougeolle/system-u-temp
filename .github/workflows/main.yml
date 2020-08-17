@@ -1,0 +1,16 @@
+name: ci
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build Stylemark
+      run: npm install && npm run build
+    - name: Deploy to GH pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+          build_dir: dist
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
