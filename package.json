@@ -30,7 +30,7 @@
     "watch-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/ -w 20 -b",
     "watch-parcel": "parcel src/index.less -d temp/",
     "build-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/",
-    "build-parcel": "parcel build src/index.less -d temp/",
+    "build-parcel": "parcel build src/index.less -d temp/ --no-minify",
     "dev": "concurrently --restart-tries 5 'npm:watch-parcel' 'npm:watch-stylemark'",
     "build": "npm run-script build-parcel && npm run-script build-stylemark",
     "start": "npm run-script dev"
