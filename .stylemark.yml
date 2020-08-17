@@ -1,6 +1,13 @@
 name: U – Les Nouveaux Composants
 fileWatchPaths: 
   - temp/*.css
+theme:
+  logo: src/images/logo.png
+  css: 
+    - src/theme.css
+  sidebar:
+    background: "#b8e2ff"
+    textColor: "#070d54"
 examples:
   css: 
     - temp/index.css
