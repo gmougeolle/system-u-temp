@@ -7,12 +7,12 @@ category: Components
 ---
 
 ## Primary buttons
-The `.btn` classes are designed to be used with the `<button>` element. 
+The `.btn` classes are designed to be used with the `<button>` element.
 
 However, you can also use these classes on `<a>` or `<input>` elements (though some browsers may apply a slightly different rendering).
 When using button classes on `<a>` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a `role="button"` to appropriately convey their purpose to assistive technologies such as screen readers.
 
-Primary buttons exist for every color in this UI-kit. Please refer to the [colors page](/#colors) to see available text and background colors. 
+Primary buttons exist for every color in this UI-kit. Please refer to the [colors page](/#colors) to see available text and background colors.
 
 *Some of them are unusable due to the low contrast they offer.*
 
@@ -82,14 +82,14 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
 
 .btn {
     display: inline-block;
-    border-radius: 30px;
     padding: 1em 1.5em;
-
-    cursor: pointer;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    cursor: pointer;
 
-    &:disabled, &.disabled {
+    &:disabled,
+    &.disabled {
         opacity: 0.6;
         pointer-events: none;
     }
@@ -99,8 +99,8 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
     .btn;
 
     color: white;
-    text-transform: uppercase;
     letter-spacing: 1px;
+    text-transform: uppercase;
 
     .for(@colors, {
         &.btn-primary-@{value} {
@@ -110,13 +110,15 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
                 background-color: lighten(@@value, 10%);
             }
         }
-    })
-}
+    }); }
 
 //Default colors, unfortunately we can't do something like `.btn-primary-blue-300;` here :/
 .btn-primary {
     background-color: @blue-300;
-    &:active, &:hover, &.active {
+
+    &:active,
+    &:hover,
+    &.active {
         background-color: lighten(@blue-300, 10%);
     }
 }
@@ -126,7 +128,9 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
 
     border: 1px solid transparent;
 
-    &:active, &:hover, &.active {
+    &:active,
+    &:hover,
+    &.active {
         text-decoration: underline;
     }
 
@@ -135,13 +139,12 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
             border-color: @@value;
             color: @@value;
         }
-    })
-}
+    }); }
 
 //Default colors, unfortunately we can't do something like `.btn-secondary-blue-300;` here :/
 .btn-secondary {
-    border-color: @blue-300;
     color: @blue-300;
+    border-color: @blue-300;
 }
 
 //Sizes. em mesurements are provided "as-is" with no guarantees whatsoever.
@@ -152,7 +155,7 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
 }
 
 .btn-sm {
-    padding: .5rem 0.9rem;
-    font-size: .875rem;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.875rem;
     line-height: 1.5;
 }

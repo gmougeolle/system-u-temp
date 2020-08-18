@@ -1,0 +1,11 @@
+/* Special styling for grid blocks */
+.container [class^="col"] {
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.container .row + .row {
+    margin-top: 50px;
+}
