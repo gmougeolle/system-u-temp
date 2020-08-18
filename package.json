@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "format": "eslint . --fix",
+    "format": "stylelint 'src/**/*.less' --fix",
     "watch-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/ -w 20 -b",
     "watch-parcel": "parcel src/index.less -d temp/",
     "build-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/",

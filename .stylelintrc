@@ -12,6 +12,7 @@
       {
         "severity": "warning"
       }
-    ]
+    ],
+    "indentation": 4
   }
 }
