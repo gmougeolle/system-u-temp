@@ -21,6 +21,10 @@ They play nice with mobile too, of course.
     display: flex;
     min-height: 40px; //Temp, remove this once it's in the header
 
+    @media screen and (max-width: @md) {
+        display: block;
+    }
+
     .tab {
         position: relative;
         color: @grey-300;
@@ -43,6 +47,19 @@ They play nice with mobile too, of course.
                 height: 3px;
                 background-color: @blue-300;
                 content: " ";
+            }
+        }
+
+        @media screen and (max-width: @md) {
+            display: block;
+
+            &::after {
+                display: none;
+            }
+
+            + .tab {
+                margin-top: 10px;
+                margin-left: 0;
             }
         }
     }
