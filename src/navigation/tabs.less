@@ -1,0 +1,49 @@
+/*
+---
+name: Nav Tabs
+category: Navigation
+---
+
+Navigation allow for easy navigation in the header. You can toggle a `.active` class to make them appear selected.
+They play nice with mobile too, of course.
+
+```navtabs.html
+<nav class="nav-tabs">
+    <a class="tab active" href="#">Données</a>
+    <a class="tab" href="#">Réutilisations</a>
+    <a class="tab" href="#">Organisations</div>
+</nav>
+```
+
+*/
+
+.nav-tabs {
+    display: flex;
+    min-height: 40px; //Temp, remove this once it's in the header
+
+    .tab {
+        position: relative;
+        color: @grey-300;
+        font-weight: bold;
+        font-size: 1.2em;
+        text-decoration: none;
+
+        + .tab {
+            margin-left: 20px;
+        }
+
+        &.active {
+            pointer-events: none;
+
+            &::after {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                height: 3px;
+                background-color: @blue-300;
+                content: " ";
+            }
+        }
+    }
+}
