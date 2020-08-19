@@ -1,0 +1,45 @@
+/*
+---
+name: Tabs
+category: Components
+---
+
+Tabs allow for easy navigation between categories. You can toggle a `.active` class to make them appear selected.
+
+```tabs.html
+<nav class="tabs">
+    <a class="tab active" href="#">Selection Etalab</a>
+    <a class="tab" href="#">Dernières réutilisations</a>
+    <a class="tab" href="#">Voir plus</div>
+</nav>
+```
+
+*/
+
+.tabs {
+    display: flex;
+
+    .tab {
+        padding: 7px 12px;
+        color: @grey-200;
+        text-decoration: none;
+        border: 1px solid @grey-200;
+        border-radius: 30px;
+        transition: border ease 0.1s;
+        transition-property: border, color;
+
+        + .tab {
+            margin-left: 10px;
+        }
+
+        &.active,
+        &:hover {
+            color: @grey-300;
+            border: 1px solid @grey-300;
+        }
+
+        &.active {
+            pointer-events: none;
+        }
+    }
+}

@@ -26,6 +26,7 @@ Primary buttons exist for every color in this UI-kit. Please refer to the [color
 <p><a href="#" role="button" class="btn-primary btn-primary-orange-100">btn-primary-orange-100</a></p>
 <p><a href="#" role="button" class="btn-primary btn-primary-grey-100">btn-primary-grey-100</a></p>
 <p><a href="#" role="button" class="btn-primary btn-primary-grey-200">btn-primary-grey-200</a></p>
+<p><a href="#" role="button" class="btn-primary btn-primary-grey-300">btn-primary-grey-300</a></p>
 ```
 
 
@@ -43,6 +44,7 @@ As for primary buttons, secondary buttons exist in every color available.
 <p><a href="#" role="button" class="btn-secondary btn-secondary-orange-100">btn-secondary-orange-100</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-grey-100">btn-secondary-grey-100</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-grey-200">btn-secondary-grey-200</a></p>
+<p><a href="#" role="button" class="btn-secondary btn-secondary-grey-300">btn-secondary-grey-300</a></p>
 ```
 
 
@@ -110,7 +112,8 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
                 background-color: lighten(@@value, 10%);
             }
         }
-    }); }
+    });
+}
 
 //Default colors, unfortunately we can't do something like `.btn-primary-blue-300;` here :/
 .btn-primary {
@@ -139,7 +142,8 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
             border-color: @@value;
             color: @@value;
         }
-    }); }
+    });
+}
 
 //Default colors, unfortunately we can't do something like `.btn-secondary-blue-300;` here :/
 .btn-secondary {
