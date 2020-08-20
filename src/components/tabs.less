@@ -20,16 +20,17 @@ Tabs allow for easy navigation between categories. You can toggle a `.active` cl
     display: flex;
 
     .tab {
-        padding: 7px 12px;
+        padding: @spacing-xs @spacing-sm;
         color: @grey-200;
+        font-size: @font-size-sm;
         text-decoration: none;
         border: 1px solid @grey-200;
-        border-radius: 30px;
+        border-radius: 3em;
         transition: border ease 0.1s;
         transition-property: border, color;
 
         + .tab {
-            margin-left: 10px;
+            margin-left: @spacing-sm;
         }
 
         &.active,
