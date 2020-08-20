@@ -1,0 +1,23 @@
+/*
+---
+name: Responsive
+category: Layout
+---
+
+```debug.html
+    <div class="debug" />
+```
+*/
+
+// Breakpoints values
+@breakpoint-sm: 560px;
+@breakpoint-md: 760px;
+@breakpoint-lg: 960px;
+@breakpoint-xl: 1100px;
+
+@query-sm: ~'screen and (max-width: @{breakpoint-sm})';
+@query-md: ~'screen and (max-width: @{breakpoint-md})';
+@query-lg: ~'screen and (max-width: @{breakpoint-lg})';
+@query-xl: ~'screen and (max-width: @{breakpoint-xl})';
+
+@breakpoints: sm, md, lg, xl;

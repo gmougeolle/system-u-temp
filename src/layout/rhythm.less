@@ -9,10 +9,7 @@ Use a standardised spacing value for most of the general layout to ensure consis
 Prefer setting your vertical rhythm using `margin-bottom` to avoid entering the collapsing margins hell.
 
 ## Notation
-
-Spacing utilities that apply to all breakpoints, from `xs` to `xl`, have no breakpoint abbreviation in them. This is because those classes are applied from `min-width: 0` and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation.
-
-The classes are named using the format `{property}{sides}-{size}` for `xs` and `{property}{sides}-{breakpoint}-{size}` for `sm`, `md`, `lg`, and `xl`.
+The classes are named using the format `{property}{sides}-{size}` or `{property}{sides}-{breakpoint}-{size}`.
 
 Where *property* is one of:
 
@@ -132,5 +129,87 @@ each(@spacing, {
     .p-@{value} {
         @var: 'spacing-@{value}';
         padding: @@var;
+    }
+});
+
+each(@breakpoints, .(@bk, @_k, @_i) {
+    @var: 'query-@{bk}';
+
+    @media @@var {
+        each(@spacing, {
+            .mt-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                margin-top: @@var;
+            }
+
+            .mb-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                margin-bottom: @@var;
+            }
+
+            .ml-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                margin-left: @@var;
+            }
+
+            .mr-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                margin-right: @@var;
+            }
+
+            .mx-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                margin-left: @@var;
+                margin-right: @@var;
+            }
+
+            .my-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                margin-top: @@var;
+                margin-bottom: @@var;
+            }
+
+            .m-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                margin: @@var;
+            }
+
+            .pt-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                padding-top: @@var;
+            }
+
+            .pb-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                padding-bottom: @@var;
+            }
+
+            .pl-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                padding-left: @@var;
+            }
+
+            .p-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                padding-right: @@var;
+            }
+
+            .px-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                padding-left: @@var;
+                padding-right: @@var;
+            }
+
+            .py-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                padding-top: @@var;
+                padding-bottom: @@var;
+            }
+
+            .p-@{bk}-@{value} {
+                @var: 'spacing-@{value}';
+                padding: @@var;
+            }
+        });
     }
 });

@@ -105,19 +105,11 @@ By default, blocks on the same row will take up an equal height. You can opt for
 
 */
 
-//Breakpoints values
-@sm: 560px;
-@md: 760px;
-@lg: 960px;
-@xl: 1100px;
-
-@breakpoints: sm, md, lg, xl;
-
 @columns: 12;
 @gutter: 25px;
 
 .container {
-    max-width: @xl;
+    max-width: @breakpoint-xl;
     margin: auto;
     overflow: hidden;
 }
@@ -170,7 +162,7 @@ By default, blocks on the same row will take up an equal height. You can opt for
 }
 
 //Generating col-{n} classes
-each(@columns, {
+each(range(@columns), {
     .col-@{index} {
         .col(@index);
     }
@@ -180,11 +172,13 @@ each(@columns, {
     }
 });
 
-//Generating responsive classes col-{sm|md|lg|xl}-{n}
-//And offset classes offset-{sm|md|lg|xl}-{n}
+// Generating responsive classes col-{sm|md|lg|xl}-{n}
+// And offset classes offset-{sm|md|lg|xl}-{n}
 each(@breakpoints, .(@bk, @_k, @_i) {
-    @media screen and (max-width: @@bk) {
-        each(@columns, {
+    @var: 'query-@{bk}';
+
+    @media @@var {
+        each(range(@columns), {
             .col-@{bk}-@{index} {
                 .col(@index);
             }
