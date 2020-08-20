@@ -32,6 +32,13 @@ All HTML headings, `<h1>` through `<h5>`, are available.
 <span class="h4">Portez ce vieux whisky au juge blond qui fume</span>
 ```
 
+## Headings Exponents
+For most headings we can have an exponent representing the amount of things found in the current section, you can use a `<sup>` tag to reprensent those
+
+```headingsexponents.html
+<h2>Ressources <sup>64</sup></h2>
+```
+
 ## Inline Styles
 Styling for common inline HTML5 elements.
 
@@ -64,47 +71,63 @@ Styling for common inline HTML5 elements.
 @font-weight-bold: 700;
 
 html * {
-    color: @grey-300;
+    color: @grey-400;
     font-size: @font-size-base;
     font-family: @font-family-base;
     line-height: @line-height-base;
     text-rendering: optimizeLegibility;
 }
 
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
 h1,
 h2,
 h3,
-h4 {
+h4,
+.h1,
+.h2,
+.h3,
+.h4, {
     display: block;
     font-weight: bold;
+
+    sup {
+        color: inherit;
+        font-weight: @font-weight-light;
+
+        &::before {
+            color: @grey-200;
+            vertical-align: baseline;
+            content: '(';
+        }
+
+        &::after {
+            color: @grey-200;
+            vertical-align: baseline;
+            content: ')';
+        }
+    }
 }
 
 .h1,
 h1 {
-    margin: 0.67em 0;
+    margin-bottom: @spacing-hg;
     font-size: @font-size-hg;
 }
 
 .h2,
 h2 {
-    margin: 0.83em 0;
+    margin-bottom: @spacing-lg;
     font-size: @font-size-xl;
 }
 
 .h3,
 h3 {
-    margin: 1em 0;
+    margin-bottom: @spacing-md;
     font-size: @font-size-lg;
 }
 
 .h4,
 h4 {
-    margin: 1.33em 0;
+    margin-bottom: @spacing-sm;
     font-size: @font-size-base;
 }
 
