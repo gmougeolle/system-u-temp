@@ -23,3 +23,10 @@
 .pill.bg-white {
     border: 1px solid  #eeeee8;
 }
+
+/* Styles for spacing blocks */
+.block {
+    width: 50%;
+    text-align: center;
+    background-color: #eeeee8;
+}
