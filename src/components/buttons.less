@@ -1,5 +1,3 @@
-@import "../plugins/for.less";
-
 /*
 ---
 name: Buttons
@@ -104,7 +102,7 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    .for(@colors, {
+    each(@colors, {
         &.btn-primary-@{value} {
             background-color: @@value;
 
@@ -137,7 +135,7 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
         text-decoration: underline;
     }
 
-    .for(@colors, {
+    each(@colors, {
         &.btn-secondary-@{value} {
             border-color: @@value;
             color: @@value;

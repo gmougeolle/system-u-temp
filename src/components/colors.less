@@ -1,5 +1,3 @@
-@import "../plugins/for.less";
-
 /*
 ---
 name: Colors
@@ -66,7 +64,7 @@ Similar to the contextual text color classes, easily set the background of an el
 
 @colors: white, blue-100, blue-200, blue-300, blue-400, orange-100, grey-100, grey-200, grey-300;
 
-.for(@colors, {
+each(@colors, {
     .text-@{value} {
         color: @@value;
         text-decoration: none;
@@ -79,4 +77,4 @@ Similar to the contextual text color classes, easily set the background of an el
     .bg-@{value} {
         background-color: @@value;
     }
-});
+})
