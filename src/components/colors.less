@@ -64,8 +64,7 @@ Similar to the contextual text color classes, easily set the background of an el
 @grey-200: #7c7c7c;
 @grey-300: #232323;
 
-@colors: white, blue-100, blue-200, blue-300, blue-400, orange-100, grey-100,
-  grey-200, grey-300;
+@colors: white, blue-100, blue-200, blue-300, blue-400, orange-100, grey-100, grey-200, grey-300;
 
 .for(@colors, {
     .text-@{value} {
@@ -81,17 +80,3 @@ Similar to the contextual text color classes, easily set the background of an el
         background-color: @@value;
     }
 });
-
-//Example only
-.pill {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin-right: 15px;
-    vertical-align: middle;
-    border-radius: 50%;
-
-    &.bg-white {
-        border: 1px solid @grey-100;
-    }
-}
