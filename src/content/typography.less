@@ -1,0 +1,118 @@
+/*
+---
+name: Typography
+category: Content
+---
+
+## Base Font
+We use the Aileron font from [Sora Sagano](http://dotcolon.net/) in Light, Regular and Semibold
+
+```font.html
+<h1 style='font-weight: lighter'>Portez ce vieux whisky au juge blond qui fume</h1>
+<h1 style='font-weight: normal'>Portez ce vieux whisky au juge blond qui fume</h1>
+<h1 style='font-weight: bold'>Portez ce vieux whisky au juge blond qui fume</h1>
+```
+
+## Headings
+All HTML headings, `<h1>` through `<h5>`, are available.
+
+```headings.html
+<h1>Portez ce vieux whisky au juge blond qui fume</h1>
+<h2>Portez ce vieux whisky au juge blond qui fume</h2>
+<h3>Portez ce vieux whisky au juge blond qui fume</h3>
+<h4>Portez ce vieux whisky au juge blond qui fume</h4>
+<h5>Portez ce vieux whisky au juge blond qui fume</h5>
+```
+
+`.h1` through `.h5` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element :
+
+```headings-2.html
+<span class="h1">Portez ce vieux whisky au juge blond qui fume</span>
+<span class="h2">Portez ce vieux whisky au juge blond qui fume</span>
+<span class="h3">Portez ce vieux whisky au juge blond qui fume</span>
+<span class="h4">Portez ce vieux whisky au juge blond qui fume</span>
+<span class="h5">Portez ce vieux whisky au juge blond qui fume</span>
+```
+
+## Inline Styles
+Styling for common inline HTML5 elements.
+
+```inlinestyles.html
+<p>You can use the mark tag to <mark>highlight</mark> text.</p>
+<p><del>This line of text is meant to be treated as deleted text.</del></p>
+<p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+<p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+<p><u>This line of text will render as underlined</u></p>
+<p><small>This line of text is meant to be treated as fine print.</small></p>
+<p><strong>This line rendered as bold text.</strong></p>
+<p><em>This line rendered as italicized text.</em></p>
+```
+
+*/
+
+@font-family-base: 'aileron', sans-serif;
+
+@font-size-base: 16px;
+@line-height-base: 1.25em;
+
+@font-size-xs: 0.75rem;
+@font-size-sm: 0.875rem;
+@font-size-lg: 1.25rem;
+@font-size-xl: 2rem;
+@font-size-hg: 2.5rem; // hg for humongous
+
+@font-weight-light: normal;
+@font-weight-normal: 200;
+@font-weight-bold: bold;
+
+html * {
+    font-size: @font-size-base;
+    font-family: @font-family-base;
+    line-height: @line-height-base;
+    text-rendering: optimizeLegibility;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+    display: block;
+    font-weight: bold;
+}
+
+.h1,
+h1 {
+    margin: 0.67em 0;
+    font-size: 2.5em;
+    line-height: 1em;
+}
+
+.h2,
+h2 {
+    margin: 0.83em 0;
+    font-size: 1.5em;
+}
+
+.h3,
+h3 {
+    margin: 1em 0;
+    font-size: 1.17em;
+}
+
+.h4,
+h4 {
+    margin: 1.33em 0;
+    font-size: 1em;
+}
+
+.h5,
+h5 {
+    margin: 1.67em 0;
+    font-size: 0.83em;
+}

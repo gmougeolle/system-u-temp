@@ -1,11 +1,17 @@
-@import "sanitize.css"; //Reset powered by normalize + postCSS-normalize
-@import "./components/font.less";
+// Reset powered by normalize + postCSS-normalize
+@import "sanitize.css";
 
-//Imports exporting variables®
-@import "./components/colors.less";
-@import "./components/grid.less";
-@import "./components/headings.less";
-@import "./components/inline-style.less";
+// Aileron Font
+@import "./font.less";
+
+// Content
+@import "./content/typography.less";
+@import "./content/colors.less";
+
+// Layout
+@import "./layout/grid.less";
+@import "./layout/nav_tabs.less";
+
+// Components
 @import "./components/buttons.less";
 @import "./components/tabs.less";
-@import "./navigation/tabs.less";
