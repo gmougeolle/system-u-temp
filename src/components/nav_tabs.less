@@ -1,25 +1,28 @@
 /*
 ---
 name: Nav Tabs
-category: Layout
+category: Components
 ---
 
 Navigation allow for easy navigation in the header. You can toggle a `.active` class to make them appear selected.
 They play nice with mobile too, of course.
 
 ```navtabs.html
-<nav class="nav-tabs">
-    <a class="tab active" href="#">Données</a>
-    <a class="tab" href="#">Réutilisations</a>
-    <a class="tab" href="#">Organisations</div>
-</nav>
+<header style="height: 40px;">
+    <nav class="nav-tabs">
+        <a class="tab active" href="#">Données</a>
+        <a class="tab" href="#">Réutilisations</a>
+        <a class="tab" href="#">Organisations</div>
+    </nav>
+</header>
 ```
 
 */
 
 .nav-tabs {
+    position: relative;
     display: flex;
-    min-height: 40px; //Temp, remove this once it's in the header
+    height: 100%;
 
     @media screen and (max-width: @md) {
         display: block;
@@ -28,12 +31,12 @@ They play nice with mobile too, of course.
     .tab {
         position: relative;
         color: @grey-400;
-        font-weight: bold;
-        font-size: 1.2em;
+        font-weight: @font-weight-bold;
+        font-size: @font-size-base;
         text-decoration: none;
 
         + .tab {
-            margin-left: 20px;
+            margin-left: @spacing-md;
         }
 
         &.active {
@@ -44,7 +47,7 @@ They play nice with mobile too, of course.
                 right: 0;
                 bottom: 0;
                 left: 0;
-                height: 3px;
+                height: 2px;
                 background-color: @blue-300;
                 content: " ";
             }
@@ -58,7 +61,7 @@ They play nice with mobile too, of course.
             }
 
             + .tab {
-                margin-top: 10px;
+                margin-top: @spacing-sm;
                 margin-left: 0;
             }
         }
