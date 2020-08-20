@@ -30,6 +30,7 @@
   "license": "MIT",
   "scripts": {
     "format": "stylelint 'src/**/*.less' --fix",
+    "check-rules": "stylelint 'src/**/*.less' --config .stylelintrc_browser",
     "watch-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/ -w 20 -b",
     "watch-parcel": "parcel src/index.less -d temp/",
     "build-stylemark": "stylemark -c .stylemark.yml -i temp/ -o dist/",

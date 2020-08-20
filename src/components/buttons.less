@@ -27,7 +27,6 @@ Primary buttons exist for every color in this UI-kit. Please refer to the [color
 <p><a href="#" role="button" class="btn-primary btn-primary-grey-300">btn-primary-grey-300</a></p>
 ```
 
-
 ## Secondary buttons
 
 As for primary buttons, secondary buttons exist in every color available.
@@ -44,7 +43,6 @@ As for primary buttons, secondary buttons exist in every color available.
 <p><a href="#" role="button" class="btn-secondary btn-secondary-grey-200">btn-secondary-grey-200</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-grey-300">btn-secondary-grey-300</a></p>
 ```
-
 
 ## Button sizes
 
@@ -101,6 +99,13 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
     color: white;
     letter-spacing: 1px;
     text-transform: uppercase;
+    background-color: @blue-300;
+
+    &:active,
+    &:hover,
+    &.active {
+        background-color: lighten(@blue-300, 10%);
+    }
 
     each(@colors, {
         &.btn-primary-@{value} {
@@ -113,21 +118,12 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
     });
 }
 
-//Default colors, unfortunately we can't do something like `.btn-primary-blue-300;` here :/
-.btn-primary {
-    background-color: @blue-300;
-
-    &:active,
-    &:hover,
-    &.active {
-        background-color: lighten(@blue-300, 10%);
-    }
-}
-
 .btn-secondary {
     .btn;
 
+    color: @blue-300;
     border: 1px solid transparent;
+    border-color: @blue-300;
 
     &:active,
     &:hover,
@@ -143,13 +139,7 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
     });
 }
 
-//Default colors, unfortunately we can't do something like `.btn-secondary-blue-300;` here :/
-.btn-secondary {
-    color: @blue-300;
-    border-color: @blue-300;
-}
-
-//Sizes. em mesurements are provided "as-is" with no guarantees whatsoever.
+// Sizes. em mesurements are provided "as-is" with no guarantees whatsoever.
 .btn-lg {
     padding: 1em 1.3em;
     font-size: 1.25rem;
