@@ -103,10 +103,28 @@ By default, blocks on the same row will take up an equal height. You can opt for
 </div>
 ```
 
+### Fluid grids
+
+Sometimes you need to occupy the available space fully, you can use `.container-fluid` to still have a grid available to you when needed.
+
+```grid-fluid.html
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-blue-200">3 blocks</div>
+        <div class="col bg-blue-200">3 blocks</div>
+        <div class="col bg-blue-200">3 blocks</div>
+    </div>
+</div>
+```
+
 */
 
 @columns: 12;
-@gutter: 25px;
+@gutter: 10px;
+
+.container-fluid {
+    width: 100%;
+}
 
 .container {
     max-width: @breakpoint-xl;
