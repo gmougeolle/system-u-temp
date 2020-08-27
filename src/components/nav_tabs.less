@@ -22,13 +22,15 @@ They play nice with mobile too, of course.
 .nav-tabs {
     position: relative;
     display: flex;
-    height: 100%;
+    justify-content: center;
 
     @media @query-md {
         display: block;
     }
 
     .tab {
+        display: flex;
+        align-items: center;
         position: relative;
         color: @grey-400;
         font-weight: @font-weight-bold;
@@ -47,7 +49,7 @@ They play nice with mobile too, of course.
                 right: 0;
                 bottom: 0;
                 left: 0;
-                height: 2px;
+                height: 3px;
                 background-color: @blue-300;
                 content: " ";
             }

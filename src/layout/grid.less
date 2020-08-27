@@ -153,11 +153,15 @@ Sometimes you need to occupy the available space fully, you can use `.container-
 
 // Horizontal alignment
 .justify-start {
-    justify-content: start;
+    justify-content: flex-start;
 }
 
 .justify-center {
     justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
 }
 
 .justify-between {
@@ -205,7 +209,7 @@ Sometimes you need to occupy the available space fully, you can use `.container-
 
 //col-{n} generator
 .col(@i) {
-    @width: ((100%/@columns) * @i);
+    @width: ((100% / @columns) * @i);
 
     flex-basis: calc(@width - 2 * @gutter);
     width: calc(@width - 2 * @gutter);
@@ -213,7 +217,7 @@ Sometimes you need to occupy the available space fully, you can use `.container-
 
 //offset-{n} generator
 .offset(@i) {
-    @width: ((100%/@columns) * @i);
+    @width: ((100% / @columns) * @i);
 
     margin-left: calc(@width + @gutter);
 }
