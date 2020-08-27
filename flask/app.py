@@ -59,5 +59,5 @@ def static_file(path):
         return send_from_directory('../temp/', path)
 
 @app.route('/<template>')
-def home(template=None):
+def templates(template=None):
     return render_template('home.html', template=template)

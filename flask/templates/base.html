@@ -1,7 +1,7 @@
 {% extends theme('raw.html') %}
 
 {% block extra_css %}
-  <link rel="stylesheet" href="/static/index.css">
+  <link rel="stylesheet" href="static/index.css">
 {% endblock %}
 
 {% block body %}
@@ -9,7 +9,7 @@
     {% block subnav %}
     {% include theme('subnav-small.html') with context %}
     {% endblock %}
-    
+
     <notification-zone></notification-zone>
 
     {% with messages = get_flashed_messages() %}
