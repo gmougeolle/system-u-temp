@@ -21,6 +21,7 @@ All HTML headings, `<h1>` through `<h5>`, are available.
 <h2>Portez ce vieux whisky au juge blond qui fume</h2>
 <h3>Portez ce vieux whisky au juge blond qui fume</h3>
 <h4>Portez ce vieux whisky au juge blond qui fume</h4>
+<h5>Portez ce vieux whisky au juge blond qui fume</h5>
 ```
 
 `.h1` through `.h5` classes are also available, for when you want to match the font styling of a heading but cannot use the associated HTML element :
@@ -30,6 +31,7 @@ All HTML headings, `<h1>` through `<h5>`, are available.
 <span class="h2">Portez ce vieux whisky au juge blond qui fume</span>
 <span class="h3">Portez ce vieux whisky au juge blond qui fume</span>
 <span class="h4">Portez ce vieux whisky au juge blond qui fume</span>
+<span class="h5">Portez ce vieux whisky au juge blond qui fume</span>
 ```
 
 ## Headings Exponents
@@ -63,6 +65,7 @@ Styling for common inline HTML5 elements.
 
 @font-size-xs: 0.75rem;
 @font-size-sm: 0.875rem;
+@font-size-md: 1rem;
 @font-size-lg: 1.25rem;
 @font-size-xl: 2rem;
 @font-size-hg: 2.5rem; // hg for humongous
@@ -83,10 +86,12 @@ h1,
 h2,
 h3,
 h4,
+h5,
 .h1,
 .h2,
 .h3,
-.h4, {
+.h4,
+.h5 {
     display: block;
     margin-top: 0;
     color: inherit;
@@ -132,6 +137,11 @@ h3 {
 h4 {
     margin-bottom: @spacing-sm;
     font-size: @font-size-base;
+}
+
+.h5, h5 {
+    margin-bottom: @spacing-xs;
+    font-size: @font-size-xs;
 }
 
 .small,

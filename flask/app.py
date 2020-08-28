@@ -49,9 +49,13 @@ def owner_name(s):
 def avatar_url(s):
     return noop(s)
 
+@app.template_filter('obfuscate')
+def obfuscate(s):
+    return noop(s)
+
 @app.context_processor
 def inject_Vars():
-    return dict(_=noop, theme=noop, reuse="", hook=sink, theme_static=noop, current_site={'keywords': []}, static=noop, url_for=noop, i18n_alternate_links=sink, csrf_token=noop, current_user=None, config={'LINKCHECKING_ENABLED': False, 'LINKCHECKING_UNCHECKED_TYPES': False, 'MD_ALLOWED_TAGS': [], 'MD_ALLOWED_ATTRIBUTES': [], 'MD_ALLOWED_STYLES': [], 'TAG_MIN_LENGTH': 0, 'TAG_MAX_LENGTH': 0}, manifest=noop, current_theme=None)
+    return dict(_=noop, theme=noop, reuse="", hook=sink, theme_static=noop, current_site={'keywords': []}, static=noop, url_for=noop, i18n_alternate_links=sink, csrf_token=noop, current_user=None, config={'LINKCHECKING_ENABLED': False, 'LINKCHECKING_UNCHECKED_TYPES': False, 'MD_ALLOWED_TAGS': [], 'MD_ALLOWED_ATTRIBUTES': [], 'MD_ALLOWED_STYLES': [], 'TAG_MIN_LENGTH': 0, 'TAG_MAX_LENGTH': 0}, manifest=noop, current_theme=None, package_version=noop)
 
 # Warning : this is a security hole, don't use this in prod !
 @app.route('/static/<path:path>')
