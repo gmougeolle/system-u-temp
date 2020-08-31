@@ -237,6 +237,42 @@
 </section>
 {# End datasets section #}
 
+{# Reuse section #}
+<section class="reuse py-hg">
+    <div class="container">
+        <div class="row">
+            <div class="col-2 col-lg-9">
+                <h3>{{ _('Réutilisations') }}</h3>
+            </div>
+            <div class="col-10 col-lg-3">
+                <nav class="tabs">
+                    <a href="#" class="tab hidden-lg">{{ _('Selection Etalab') }}</a>
+                    <a href="#" class="tab hidden-lg">{{ _('Dernières réutilisations') }}</a>
+                    <a href="#" class="tab">{{ _('Voir plus') }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container reuse-cards">
+        <div class="row tab-content pt-xl pt-md-md">
+            <div class="col-3">
+                {% include theme('reuse/card.html') %}
+            </div>
+            <div class="col-3">
+                {% include theme('reuse/card.html') %}
+            </div>
+            <div class="col-3">
+                {% include theme('reuse/card.html') %}
+            </div>
+            <div class="col-3">
+                {% include theme('reuse/card.html') %}
+            </div>
+        </div>
+    </div>
+</section>
+{# End reuse section #}
+
+
 {# Decouvrez #}
 <div class="decouvrez bg-blue-500">
     <div class="container py-hg">
