@@ -54,6 +54,7 @@ Styling for common inline HTML5 elements.
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
 <p><u class="text-decoration-none">This line of text will not render as underlined</u></p>
+<p class="fs-lg">This line of text is big</p>
 ```
 
 */
@@ -69,6 +70,8 @@ Styling for common inline HTML5 elements.
 @font-size-lg: 1.25rem;
 @font-size-xl: 2rem;
 @font-size-hg: 2.5rem; // hg for humongous
+
+@font-sizes: xs, sm, base, lg, xl, hg;
 
 @font-weight-light: 300;
 @font-weight-normal: 400;
@@ -148,6 +151,14 @@ h4 {
 small {
     font-size: @font-size-xs;
 }
+
+each(@font-sizes, {
+    @var: 'font-size-@{value}';
+
+    .fs-@{value} {
+        font-size: @@var;
+    }
+});
 
 .text-decoration-none {
     text-decoration: none !important;
