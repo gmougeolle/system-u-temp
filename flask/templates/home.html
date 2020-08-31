@@ -10,20 +10,22 @@
 {% set body_class = 'home' %}
 
 {% block subnav %}
-{% include theme('subnav-large.html') %}
+{# {% include theme('subnav-large.html') %} #}
 {% endblock %}
 
 {% block content %}
 {# {% cache cache_duration, 'home', g.lang_code %} #}
 {# Carousels section #}
+{#
 <section class="default">
     <div class="container">
         {% include theme('carousel.html')  %}
     </div>
 </section>
+#}
 {# End Carousels section #}
 
-<section class="default">
+<section class="default hidden">
     <div class="container">
 
         {# First row #}
@@ -103,6 +105,28 @@
 </section>
 {% endif %}
 
+<section class="hero py-xl py-lg-lg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-5 col-lg-12">
+                    <h1>Plateforme ouverte des données publiques françaises</h1>
+                    <form action="#" class="hero-search">
+                        <input type="text" placeholder="Recherche" />
+                    </form>
+                </div>
+                <div class="col-6 offset-1 offset-lg-0 mt-lg-lg col-lg-12 text-align-center">
+                    <div class="hero-news mb-xl" style="background-image: url('https://placekitten.com/700/900')">
+                        <div class="news-content">
+                            <strong class="text-yellow-100 fs-md">L'actualité en données</strong>
+                            <h2 class="my-md text-white">Retour sur les activités de data.gouv.fr en 2019</h2>
+                            <a class="btn-primary mt-md">Voir plus</a>
+                        </div>
+                    </div>
+                    <a href="#" class="nav-link">toutes les actualités</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
 {# Datasets section #}
 {# {% set nb_datasets = current_site.settings.home_datasets|length %} #}
