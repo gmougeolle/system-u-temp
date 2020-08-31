@@ -21,6 +21,7 @@ Primary buttons exist for every color in this UI-kit. Please refer to the [color
 <p><a href="#" role="button" class="btn-primary btn-primary-blue-200">btn-primary-blue-200</a></p>
 <p><a href="#" role="button" class="btn-primary btn-primary-blue-300">btn-primary-blue-300</a></p>
 <p><a href="#" role="button" class="btn-primary btn-primary-blue-400">btn-primary-blue-400</a></p>
+<p><a href="#" role="button" class="btn-primary btn-primary-blue-500">btn-primary-blue-500</a></p>
 <p><a href="#" role="button" class="btn-primary btn-primary-orange-100">btn-primary-orange-100</a></p>
 <p><a href="#" role="button" class="btn-primary btn-primary-grey-100">btn-primary-grey-100</a></p>
 <p><a href="#" role="button" class="btn-primary btn-primary-grey-200">btn-primary-grey-200</a></p>
@@ -38,6 +39,7 @@ As for primary buttons, secondary buttons exist in every color available.
 <p><a href="#" role="button" class="btn-secondary btn-secondary-blue-200">btn-secondary-blue-200</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-blue-300">btn-secondary-blue-300</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-blue-400">btn-secondary-blue-400</a></p>
+<p><a href="#" role="button" class="btn-secondary btn-secondary-blue-500">btn-secondary-blue-500</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-orange-100">btn-secondary-orange-100</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-grey-100">btn-secondary-grey-100</a></p>
 <p><a href="#" role="button" class="btn-secondary btn-secondary-grey-200">btn-secondary-grey-200</a></p>
@@ -87,12 +89,12 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
     .btn;
 
     color: white;
-    background-color: @blue-300;
+    background-color: @blue-400;
 
     &:active,
     &:hover,
     &.active {
-        background-color: lighten(@blue-300, 10%);
+        background-color: lighten(@blue-400, 10%);
     }
 
     each(@colors, {
@@ -111,9 +113,9 @@ Disabled buttons should include the `aria-disabled="true"` attribute to indicate
 .btn-secondary {
     .btn;
 
-    color: @blue-300;
+    color: @blue-400;
     border: 1px solid transparent;
-    border-color: @blue-300;
+    border-color: @blue-400;
 
     &:active,
     &:hover,
