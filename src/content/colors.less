@@ -70,6 +70,9 @@ Similar to the contextual text color classes, easily set the background of an el
 @grey-200: #d7d7d7;
 @grey-300: #7c7c7c;
 @grey-400: #232323;
+@green-300: #00be7b;
+@green-400: #008452;
+@green-500: #023d13;
 
 @contrast-white: @grey-300;
 @contrast-blue-100: @blue-300;
@@ -83,8 +86,11 @@ Similar to the contextual text color classes, easily set the background of an el
 @contrast-grey-200: @white;
 @contrast-grey-300: @white;
 @contrast-grey-400: @white;
+@contrast-green-300: @white;
+@contrast-green-400: @white;
+@contrast-green-500: @white;
 
-@colors: white, blue-100, blue-200, blue-300, blue-400, blue-500, orange-100, yellow-100, grey-100, grey-200, grey-300, grey-400;
+@colors: white, blue-100, blue-200, blue-300, blue-400, blue-500, orange-100, yellow-100, grey-100, grey-200, grey-300, grey-400, green-300, green-400, green-500;
 
 each(@colors, {
     .text-@{value} {

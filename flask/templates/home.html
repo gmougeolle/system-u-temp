@@ -106,27 +106,66 @@
 {% endif %}
 
 <section class="hero py-xl py-lg-lg">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-5 col-lg-12">
-                    <h1>Plateforme ouverte des données publiques françaises</h1>
-                    <form action="#" class="hero-search">
-                        <input type="text" placeholder="Recherche" />
-                    </form>
-                </div>
-                <div class="col-6 offset-1 offset-lg-0 mt-lg-lg col-lg-12 text-align-center">
-                    <div class="hero-news mb-xl" style="background-image: url('https://placekitten.com/700/900')">
-                        <div class="news-content">
-                            <strong class="text-yellow-100 fs-md">L'actualité en données</strong>
-                            <h2 class="my-md text-white">Retour sur les activités de data.gouv.fr en 2019</h2>
-                            <a class="btn-primary mt-md">Voir plus</a>
-                        </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-5 col-lg-12">
+                <h1>Plateforme ouverte des données publiques françaises</h1>
+                <form action="#" class="hero-search">
+                    <input type="text" placeholder="Recherche" />
+                </form>
+            </div>
+            <div class="col-6 offset-1 offset-lg-0 mt-lg-lg col-lg-12 text-align-center">
+                <div class="hero-news mb-xl" style="background-image: url('https://placekitten.com/700/900');">
+                    <div class="news-content">
+                        <strong class="text-yellow-100 fs-md">L'actualité en données</strong>
+                        <h2 class="my-md text-white">Retour sur les activités de data.gouv.fr en 2019</h2>
+                        <a class="btn-primary mt-md">Voir plus</a>
                     </div>
-                    <a href="#" class="nav-link">toutes les actualités</a>
+                </div>
+                <a href="#" class="nav-link">toutes les actualités</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{# Donnees Section #}
+<div class="donnees callout bg-green-300 inset-green-400">
+    <div class="container py-hg">
+        <div class="row">
+            <div class="col-2 col-sm-12 text-align-center-sm">
+                <h3 class="mb-sm-lg text-green-500">data.gouv.fr c’est</h3>
+            </div>
+            <div class="col-4 col-sm-12 donnees-data-table">
+                <div class="donnees-data">
+                    <span class="fs-lg text-align-right text-white donnees-data-number">34 401</span>
+                    <span class="fs-lg donnees-data-caption text-green-500">Jeux de données</span>
+                </div>
+                <div class="donnees-data">
+                    <span class="fs-lg text-align-right text-white donnees-data-number">186 621</span>
+                    <span class="fs-lg donnees-data-caption text-green-500">Ressources</span>
+                </div>
+                <div class="donnees-data">
+                    <span class="fs-lg text-align-right text-white donnees-data-number">2 021</span>
+                    <span class="fs-lg donnees-data-caption text-green-500">Réutilisations</span>
+                </div>
+            </div>
+            <div class="col-4 col-sm-12 donnees-data-table">
+                <div class="donnees-data">
+                    <span class="fs-lg text-align-right text-white donnees-data-number">34 401</span>
+                    <span class="fs-lg donnees-data-caption text-green-500">Jeux de données</span>
+                </div>
+                <div class="donnees-data">
+                    <span class="fs-lg text-align-right text-white donnees-data-number">186 621</span>
+                    <span class="fs-lg donnees-data-caption text-green-500">Ressources</span>
+                </div>
+                <div class="donnees-data">
+                    <span class="fs-lg text-align-right text-white donnees-data-number">2 021</span>
+                    <span class="fs-lg donnees-data-caption text-green-500">Réutilisations</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
 {# Datasets section #}
 {# {% set nb_datasets = current_site.settings.home_datasets|length %} #}
@@ -134,7 +173,6 @@
     ('editorial-datasets', _('Featured datasets'), current_site.settings.home_datasets, {}),
     ('recent-datasets', _('Latest datasets'), recent_datasets[:nb_datasets], {'sort': '-created'}),
 ) %} #}
-
 <section class="container datasets py-hg">
     {# Dataset tabs #}
     <div class="row">
