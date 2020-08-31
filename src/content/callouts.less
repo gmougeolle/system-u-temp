@@ -26,5 +26,11 @@ Callouts are areas that are meant to pop "out" of the page, usually with a colou
             display: block;
             content: '';
         }
+
+        @media @query-md {
+            &.inset-@{value}::before {
+                width: @spacing-sm;
+            }
+        }
     });
 }
