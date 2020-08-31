@@ -43,32 +43,32 @@ a {
 
 .nav-link {
     position: relative;
-    margin-left: 1em;
+    margin-left: 0.75em;
     color: @grey-400;
     font-weight: @font-weight-bold;
-    border-bottom: 1px solid @grey-200;
 
     &.text-decoration-none {
-        border: none;
+        &:hover {
+            text-decoration: none;
+        }
     }
 
     &::before {
         position: absolute;
-        top: 0.1em;
-        left: -1em;
+        left: -0.75em;
         width: 0.5em;
         height: 1em;
         font-size: inherit;
-        background-image: url(~'@{icon-chevron}');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 75%;
-        content: '';
+        content: '\203A';
     }
 
     &:hover {
-        text-decoration: none;
-        border-color: @grey-400;
+        text-decoration: underline;
+        text-decoration-color: @grey-400;
+
+        &::before {
+            text-decoration: none;
+        }
     }
 }
 
