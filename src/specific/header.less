@@ -5,6 +5,29 @@
         display: flex;
         align-items: center;
 
+        .mobile-menu {
+            display: none;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        @media @query-hg {
+            justify-content: space-between;
+            padding: 0 @spacing-md;
+
+            .mobile-menu {
+                display: unset;
+            }
+
+            //To horizontally center, we create a fake third element
+            &:after {
+                content: " ";
+            }
+        }
+
         svg {
             height: 55px;
         }

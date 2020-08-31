@@ -25,16 +25,21 @@
                 <span class="icon-bar"></span>
             </button>
             #}
-            <div class="col-2">
+            <div class="col-2 col-hg-12 header-logo">
+                <nav class="mobile-menu">
+                    <a href="#" title="">
+                        {% include('svg/burger-menu.svg') %}
+                    </a>
+                </nav>
                 <a
                     href="{{ url_for('site.home') }}"
                     title="_('Retourner à l'accueil de data.gouv.fr')"
-                    class="header-logo p-xs"
+                    class="p-xs"
                 >
                     {% include('svg/marianne.svg') %} {% include('svg/logotype.svg') %}
                 </a>
             </div>
-            <nav class="nav-tabs col">
+            <nav class="nav-tabs col hidden-hg">
                 {% for item in current_theme.menu %}
                 <a class="tab" href="{{ item.url }}">{{ item.url }}</a>
                 {% endfor %}
@@ -42,7 +47,7 @@
                 <a class="tab" href="#">Réutilisations</a>
                 <a class="tab" href="#">Organisations</a>
             </nav>
-            <div class="col-2 login-box">
+            <div class="col-2 login-box hidden-hg">
                 <a
                     title="{{ _('Sign In / Register') }}"
                     class="mr-md"
