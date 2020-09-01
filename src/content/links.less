@@ -47,6 +47,10 @@ a {
     color: @grey-400;
     font-weight: @font-weight-bold;
 
+    text-decoration: underline;
+    text-decoration-color: @grey-200;
+    text-underline-position: under;
+
     &.text-decoration-none {
         &:hover {
             text-decoration: none;
@@ -54,21 +58,14 @@ a {
     }
 
     &::before {
+        text-decoration: none;
+
         position: absolute;
         left: -0.75em;
         width: 0.5em;
         height: 1em;
         font-size: inherit;
         content: '\203A';
-    }
-
-    &:hover {
-        text-decoration: underline;
-        text-decoration-color: @grey-400;
-
-        &::before {
-            text-decoration: none;
-        }
     }
 }
 
