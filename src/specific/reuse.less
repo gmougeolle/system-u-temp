@@ -1,7 +1,12 @@
 .reuse {
     .reuse-cards {
-        width: @breakpoint-xl;
-        overflow-x: hidden;
+        @media @query-xl {
+            overflow-x: scroll;
+        }
+    }
+    
+    .tab-content {
+        min-width: @breakpoint-lg;
     }
 
     .reuse-image {
