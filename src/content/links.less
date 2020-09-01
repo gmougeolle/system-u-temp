@@ -33,7 +33,6 @@ Sometimes you really want more than one link, that's what `.nav-list` are for.
 
 a {
     color: @blue-400;
-    font-size: inherit;
     text-decoration: none;
 
     &:hover {
@@ -46,7 +45,6 @@ a {
     margin-left: 0.75em;
     color: @grey-400;
     font-weight: @font-weight-bold;
-
     text-decoration: underline;
     text-decoration-color: @grey-200;
     text-underline-position: under;
@@ -58,13 +56,11 @@ a {
     }
 
     &::before {
-        text-decoration: none;
-
         position: absolute;
         left: -0.75em;
         width: 0.5em;
         height: 1em;
-        font-size: inherit;
+        text-decoration: none;
         content: '\203A';
     }
 }
@@ -77,6 +73,5 @@ a {
     li {
         margin-bottom: @spacing-xs;
         margin-left: 0;
-        font-size: inherit;
     }
 }

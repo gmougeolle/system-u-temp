@@ -41,6 +41,19 @@ For most headings we can have an exponent representing the amount of things foun
 <h2>Ressources <sup>64</sup></h2>
 ```
 
+## Font Sizes
+To adjust the font size of an element you can use the `.fs-{font-size}` classes.
+
+```fontsizes.html
+<p class="fs-xs">This line has a font size of <em>0.75em</em> or <em>12px</em></p>
+<p class="fs-sm">This line has a font size of <em>0.875em</em> or <em>14px</em></p>
+<p class="fs-md">This line has a font size of <em>1em</em> or <em>16px</em></p>
+<p class="fs-lg">This line has a font size of <em>1.25em</em> or <em>20px</em></p>
+<p class="fs-xl">This line has a font size of <em>1.5em</em> or <em>24px</em></p>
+<p class="fs-xxl">This line has a font size of <em>2em</em> or <em>32px</em></p>
+<p class="fs-hg">This line has a font size of <em>2.5em</em> or <em>40px</em></p>
+```
+
 ## Inline Styles
 Styling for common inline HTML5 elements.
 
@@ -54,7 +67,6 @@ Styling for common inline HTML5 elements.
 <p><strong>This line rendered as bold text.</strong></p>
 <p><em>This line rendered as italicized text.</em></p>
 <p><u class="text-decoration-none">This line of text will not render as underlined</u></p>
-<p class="fs-lg">This line of text is big</p>
 ```
 
 */
@@ -62,22 +74,23 @@ Styling for common inline HTML5 elements.
 @font-family-base: 'aileron', sans-serif;
 
 @font-size-base: 16px;
-@line-height-base: 1.25em;
+@line-height-base: 1.25;
 
 @font-size-xs: 0.75rem;
 @font-size-sm: 0.875rem;
 @font-size-md: 1rem;
 @font-size-lg: 1.25rem;
-@font-size-xl: 2rem;
+@font-size-xl: 1.5rem;
+@font-size-xxl: 2rem;
 @font-size-hg: 2.5rem; // hg for humongous
 
-@font-sizes: xs, sm, base, lg, xl, hg;
+@font-sizes: xs, sm, base, lg, xl, xxl, hg;
 
 @font-weight-light: 300;
 @font-weight-normal: 400;
-@font-weight-bold: 500;
+@font-weight-bold: 600;
 
-html * {
+html {
     color: @grey-400;
     font-size: @font-size-base;
     font-family: @font-family-base;
@@ -97,11 +110,9 @@ h5,
 .h5 {
     display: block;
     margin-top: 0;
-    color: inherit;
     font-weight: bold;
 
     sup {
-        color: inherit;
         font-weight: @font-weight-light;
 
         &::before {

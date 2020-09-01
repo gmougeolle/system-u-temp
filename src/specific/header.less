@@ -4,6 +4,16 @@
     .header-logo {
         display: flex;
         align-items: center;
+        color: @grey-400;
+
+        svg {
+            height: 55px;
+            fill: unset;
+        }
+
+        a {
+            text-decoration: none;
+        }
 
         .mobile-menu {
             display: none;
@@ -23,13 +33,9 @@
             }
 
             //To horizontally center, we create a fake third element
-            &:after {
+            &::after {
                 content: " ";
             }
-        }
-
-        svg {
-            height: 55px;
         }
 
         .logotype {
@@ -45,7 +51,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
             color: @grey-300;
             font-weight: @font-weight-bold;
         }
