@@ -93,12 +93,27 @@ Please note that special cancelling classes `.offset-{ø|sm|md|lg|xl}-0` exist, 
 ### Vertical alignement
 
 By default, blocks on the same row will take up an equal height. You can opt for a different behaviour by using the `.align-items-start`, `.align-items-center` and `.align-items-end` classes on the `.row` div.
+When you need to alter the alignment of one item you can use `.self-stretch`, `.self-start`, `.self-end`, and `.self-center`,
 
 ```grid-valign.html
 <div class="container">
     <div class="row align-items-center">
         <div class="col-6 bg-blue-200"><div style="min-height: 200px">Huge block</div></div>
-        <div class="col-6 bg-blue-200">Smoll centered block</div>
+        <div class="col-3 bg-blue-200">Smoll centered block</div>
+        <div class="col-3 bg-blue-200 self-end">Smoll block at the bottom</div>
+    </div>
+</div>
+```
+
+### Horizontal alignement
+Sometimes you also need to specify an horizontal alignment for some items in a row, you can use `.justify-start`, `.justify-end`, `.justify-center`, `.justify-between`, `.justify-around`, and `.justify-evenly`
+
+```grid-halign.html
+<div class="container-fluid">
+    <div class="row justify-between">
+        <div class="col-3 bg-blue-200">Evenly spaced blocks</div>
+        <div class="col-3 bg-blue-200">Evenly spaced blocks</div>
+        <div class="col-3 bg-blue-200 self-end">Evenly spaced blocks</div>
     </div>
 </div>
 ```
