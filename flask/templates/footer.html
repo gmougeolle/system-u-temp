@@ -1,9 +1,9 @@
 {# {% cache cache_duration, 'footer', g.lang_code|default(config.DEFAULT_LANGUAGE)|string,
 '-'.join((package_version('udata'), package_version('udata-gouvfr'))) %} #}
-<section class="footer py-hg">
+<section class="footer py-hg py-md-md">
     <div class="container">
         <footer class="row">
-            <section class="col-3 col-hg-6 col-md-12">
+            <section class="col-3 col-hg-6 col-md-12 pt-md-md">
                 <h4>{{ _('The Open Data') }}</h4>
                 <ul>
                     <li><a href="#">Documentation</a></li>
@@ -27,7 +27,7 @@
                     {% endfor %} #}
                 </ul>
             </section>
-            <section class="col-3 col-hg-6 col-md-12">
+            <section class="col-3 col-hg-6 col-md-12 pt-md-md">
                 <h4>{{ _('Topics') }}</h4>
                 <ul>
                     <li><a href="#">Agriculture et alimentation</a></li>
@@ -48,7 +48,7 @@
                     {% endfor %} #}
                 </ul>
             </section>
-            <section class="col-3 col-hg-6 col-md-12">
+            <section class="col-3 col-hg-6 col-md-12 pt-md-md">
                 <h4>{{ _('Network') }}</h4>
                 <ul>
                     <li><a href="#">Gouvernement.fr</a></li>
@@ -64,7 +64,7 @@
                     {% endfor %} #}
                 </ul>
             </section>
-            <section class="col-3 col-hg-6 col-md-12">
+            <section class="col-3 col-hg-6 col-md-12 pt-md-md">
                 <div class="logo-etalab">
                     <a href="http://www.etalab.gouv.fr" title="{{ _('Go to Etalab’s blog') }}">
                         {% include('svg/logo-etalab.svg') %}
@@ -105,7 +105,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="col-3 col-hg-6 col-md-12">
+            <section class="col-3 col-hg-6 col-md-12 pt-md-md">
                 <h4>{{ _('Contact Us') }}</h4>
                 {% if g.lang_code == 'fr' or true %}
                 <strong>Ouverture des données publiques</strong>
