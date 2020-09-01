@@ -69,6 +69,22 @@ Styling for common inline HTML5 elements.
 <p><u class="text-decoration-none">This line of text will not render as underlined</u></p>
 ```
 
+## Alignment
+You can specify alignment for text blocks, with responsive capabilities, using `.text-align-{left|center|right}` and `.text-align-{left|center|right}-{breakpoint}`.
+
+```alignment.html
+<div class="container">
+    <div class="row">
+        <div class="col bg-blue-200 text-align-left">Left aligned</div>
+        <div class="col bg-blue-200 text-align-center">Centered</div>
+        <div class="col bg-blue-200 text-align-right">Right aligned</div>
+    </div>
+    <div class="row">
+        <div class="col-12 bg-blue-200 text-align-center-sm text-align-left">Left aligned but centered on mobile</div>
+    </div>
+</div>
+```
+
 */
 
 @font-family-base: 'aileron', sans-serif;
